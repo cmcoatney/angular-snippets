@@ -1,0 +1,83 @@
+:host {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.grid-item {
+  height: 250px;
+  width: 150px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 3px;
+}
+
+.score-image {
+  width: 150px;
+  object-fit: contain;
+}
+
+.score-title {
+  font-family: 'Avenir';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  text-align: center;
+}
+
+.score-ratio {
+  width: 50%;
+  font-family: 'Avenir';
+  font-weight: 900;
+  font-style: normal;
+  font-size: 20px;
+  text-align: center;
+}
+
+.score-percent {
+  width: 50%;
+  background-color: #e8f4d4;
+  color: #537917;
+  line-height: 12px;
+  letter-spacing: 0.25px;
+  size: 12px;
+  padding: 2px;
+  font-family: 'Avenir';
+  font-weight: 900;
+  font-style: normal;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 400px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    justify-content: space-evenly;
+  }
+
+  .grid-item {
+    background-color: turquoise;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    height: 100px;
+    width: 100px;
+    padding: 0px;
+    margin: 0px;
+  }
+}
